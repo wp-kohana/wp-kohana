@@ -80,7 +80,7 @@ if (getenv('KOHANA_ENV') !== FALSE)
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/',
+	'base_url'   => '/kohana-wordpress/',
 ));
 
 /**
