@@ -97,8 +97,9 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	'database'   => MODPATH.'database',   // Database access
-	'unittest'   => MODPATH.'unittest',   // Unit testing
+	'database' => MODPATH.'database',
+	'orm'      => MODPATH.'orm',
+	'kostache' => MODPATH.'kostache',
 ));
 
 /**
