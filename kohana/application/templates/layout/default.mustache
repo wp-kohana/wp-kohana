@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html {{{language_attributes}}}>
+<head>
+<meta charset="{{#bloginfo}}charset{{/bloginfo}}" />
+<title></title>
+
+<link rel="stylesheet" type="text/css" media="all" href="{{#bloginfo}}stylesheet_url{{/bloginfo}}" />
+<link rel="pingback" href="{{#bloginfo}}pingback_url{{/bloginfo}}" />
+
+	{{{comment_reply_script}}
+	{{{wp_head}}}
+
+</head>
+
+<body>
+
+	<div id="site">
+		<div id="header">
+			
+		</div>
+
+		<div id="page">
+			<div id="content" role="main">
+				{{>body}}
+			</div>
+			<div id="sidebar">
+				{{#get_sidebar}}-{{/get_sidebar}}
+			</div>
+			<div class="clear"></div> 
+		</div>
+
+		<div id="footer-widgets" role="contentinfo">
+			{{#get_sidebar}}footer{{/get_sidebar}}
+		</div>
+
+	</div>
+
+	{{{profiler}}}
+
+	{{{wp_footer}}}
+</body>
+</html>
