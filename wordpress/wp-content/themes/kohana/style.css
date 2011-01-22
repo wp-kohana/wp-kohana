@@ -7,3 +7,6 @@ Author URI:  http://zeelot3k.com
 Template:    twentyten
 Version:     1.0.0
 */
+
+/* Import the SASS Stylesheet */
+@import url('../../../../media/css/styles.css');
