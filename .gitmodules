@@ -1,0 +1,12 @@
+[submodule "kohana/system"]
+	path = kohana/system
+	url = git://github.com/wp-kohana/kohana-core.git
+[submodule "kohana/modules/orm"]
+	path = kohana/modules/orm
+	url = git://github.com/wp-kohana/kohana-orm.git
+[submodule "kohana/modules/database"]
+	path = kohana/modules/database
+	url = git://github.com/wp-kohana/kohana-database.git
+[submodule "kohana/modules/kostache"]
+	path = kohana/modules/kostache
+	url = git://github.com/wp-kohana/kohana-kostache.git
