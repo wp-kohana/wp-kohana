@@ -1,0 +1,23 @@
+#site {
+	@extend .container_16;
+	margin-top: 1em; margin-bottom: 1em;
+	outline: 1px solid #000;
+	overflow: hidden;
+}
+
+#header, #page, #footer-widgets {
+	@extend .grid_16;
+	margin-top: 1em; margin-bottom: 1em;
+	overflow: hidden;
+	outline: 1px solid #000;
+}
+
+#content {
+	@extend .grid_12;
+	@extend .alpha;
+}
+
+#sidebar {
+	@extend .grid_4;
+	@extend .omega;
+}
