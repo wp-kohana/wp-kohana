@@ -49,7 +49,7 @@ class Kohana_Exception extends Exception {
 		}
 
 		// Set the message
-		$message = strtr($message, $variables);
+		$message = strtr($message, (array) $variables);
 
 		// Pass the message to the parent
 		parent::__construct($message, $code);
