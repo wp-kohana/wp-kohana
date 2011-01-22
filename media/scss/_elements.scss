@@ -1,0 +1,130 @@
+/*
+* Layout
+*/
+body {
+	margin:5px 10px;
+}
+h1,h2,h3,h4,h5,h6 {
+	margin:.5em 0 .25em 0;
+	line-height:1;
+	font-weight:bold;
+}
+p, ul, ol, dl {
+	margin:.2em 0 1em 0;
+}
+ul,ol,dl {
+	margin-top:1em;
+}
+blockquote{
+	margin: .75em 1.3em;
+}
+
+/*
+* Lists
+*/
+ul {
+	list-style-type: circle;
+}
+ol {
+	list-style-type: decimal;
+}
+ul, ol {
+	padding-left:2em;
+}
+ul ul, ol ul {
+	margin-top:.2em;
+}
+dd {
+	margin-left:1.3em;
+}
+
+/*
+* basic typography
+*/
+body {
+	font-size:100%;
+	line-height:1.15em;
+	font-family:sans-serif;
+}
+body>*{
+	font-size:.875em;/* .875*16px=14px font-size:100% corresponds to 16px*/
+}
+h1{
+	font-size:1.3em;
+}
+h2{
+	font-size:1.2em;
+}
+h3{
+	font-size:1.1em;
+}
+h4 {
+	font-size:1em;
+}
+/*
+* semantic inline elements
+*/
+abbr,acronym {
+	border-bottom: 1px dotted #AAA;
+}
+sub{
+	vertical-align: sub;
+	font-size:.8em;
+}
+sup{
+	vertical-align: super;
+	font-size:.8em;
+}
+/*
+* Semantic elements and their equivalents
+*/
+samp, var, pre, code, tt{
+	font-family: monospace, monospace;
+}
+s, del{
+	text-decoration: line-through;
+}
+i, em, cite, dfn{
+	font-style: italic;
+}
+b, strong, th{
+	font-weight: bold;
+}
+ins, u {
+	text-decoration: underline;
+}
+/*
+* Non-semantic elements
+*/
+small {
+	font-size:.7em;
+}
+big {
+	font-size:1.3em;
+}
+
+/**
+ * Tables
+ */
+table {
+	width: 100%;
+}
+
+tr {
+
+}
+
+td, th {
+	padding-left: 20px;
+}
+td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+th {
+	padding-bottom: 10px;
+	font-size: 0.9em;
+	color: #258DCA;
+	font-weight: 600;
+}

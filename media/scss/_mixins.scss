@@ -1,0 +1,93 @@
+@mixin rounded($size) {
+	-webkit-border-radius: $size;
+	-moz-border-radius: $size;
+	border-radius: $size;
+}
+
+@mixin rounded-bottom($size) {
+	-webkit-border-bottom-left-radius: $size;
+	-webkit-border-bottom-right-radius: $size;
+	-moz-border-radius-bottomleft: $size;
+	-moz-border-radius-bottomright: $size;
+	border-bottom-left-radius: $size;
+	border-bottom-right-radius: $size;
+}
+
+@mixin rounded-top($size) {
+	-webkit-border-top-left-radius: $size;
+	-webkit-border-top-right-radius: $size;
+	-moz-border-radius-topleft: $size;
+	-moz-border-radius-topright: $size;
+	border-top-left-radius: $size;
+	border-top-right-radius: $size;
+}
+
+@mixin rotate($rotation) {
+	transform: rotate($rotation);
+	-o-transform: rotate($rotation);
+	-ms-transform: rotate($rotation);
+	-moz-transform: rotate($rotation);
+	-webkit-transform: rotate($rotation);
+}
+
+@mixin text-shadow($x, $y, $blur, $color)
+{
+	-o-text-shadow: $x $y $blur $color;
+	-ms-text-shadow: $x $y $blur $color;
+	-moz-text-shadow: $x $y $blur $color;
+	-webkit-text-shadow: $x $y $blur $color;
+	text-shadow: $x $y $blur $color;
+}
+
+@mixin no-text-shadow($x, $y, $blur, $color)
+{
+	-o-text-shadow: none;
+	-ms-text-shadow: none;
+	-moz-text-shadow: none;
+	-webkit-text-shadow: none;
+	text-shadow: none;
+}
+
+@mixin box-shadow($x, $y, $blur, $color)
+{
+	-o-box-shadow:  $x $y $blur $color;
+	-ms-box-shadow:  $x $y $blur $color;
+	-moz-box-shadow: $x $y $blur $color;
+	-webkit-box-shadow: $x $y $blur $color;
+	box-shadow: $x $y $blur $color;
+}
+
+@mixin inset-box-shadow($x, $y, $blur, $color)
+{
+	-o-box-shadow:  inset $x $y $blur $color;
+	-ms-box-shadow:  inset $x $y $blur $color;
+	-moz-box-shadow: inset $x $y $blur $color;
+	-webkit-box-shadow: inset $x $y $blur $color;
+	box-shadow: inset $x $y $blur $color;
+}
+
+@mixin no-box-shadow
+{
+	-o-box-shadow:  none;
+	-ms-box-shadow:  none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+@mixin background-size($size)
+{
+	-o-background-size: $size;
+	-ms-background-size: $size;
+	-moz-background-size: $size;
+	-webkit-background-size: $size;
+	background-size: $size;
+}
+
+@mixin non-selectable {
+	-o-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
