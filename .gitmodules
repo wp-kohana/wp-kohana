@@ -10,3 +10,6 @@
 [submodule "kohana/modules/kostache"]
 	path = kohana/modules/kostache
 	url = git://github.com/wp-kohana/kohana-kostache.git
+[submodule "kohana/modules/minion"]
+	path = kohana/modules/minion
+	url = git://github.com/wp-kohana/kohana-minion.git
