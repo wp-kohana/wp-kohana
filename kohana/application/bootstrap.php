@@ -100,6 +100,7 @@ Kohana::modules(array(
 	'database' => MODPATH.'database',
 	'orm'      => MODPATH.'orm',
 	'kostache' => MODPATH.'kostache',
+	'minion'   => MODPATH.'minion',
 ));
 
 /**
