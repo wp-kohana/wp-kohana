@@ -34,22 +34,24 @@ class Minion_Task_App_Install extends Minion_Task {
 			->bind('username', $username)
 			->bind('password', $password);
 
-		fwrite(STDOUT, "Hostname [localhost]: ");
-		$hostname = trim(fgets(STDIN));
-		$hostname = (Valid::not_empty($hostname)) ? $hostname : 'localhost';
-
-
-		fwrite(STDOUT, "Database: ");
-		$database = trim(fgets(STDIN));
-
-		fwrite(STDOUT, "Username: ");
-		$username = trim(fgets(STDIN));
-
-		fwrite(STDOUT, "Password: ");
-		$password = trim(fgets(STDIN));
+		$hostname = $this->ask('Hostname', 'localhost');
+		$database = $this->ask('Database');
+		$username = $this->ask('Username');
+		$password = $this->ask('Password');
 
 		$filepath = APPPATH.'config/database.php';
 		file_put_contents($filepath, $view->render());
 		fwrite(STDOUT, "File written to ".$filepath."\n");
+	}
+
+	protected function ask($message, $default = NULL)
+	{
+		$message = (is_string($default)) ? $message.' ['.$default.']: ' : $message.': ';
+		fwrite(STDOUT, $message);
+		$value = trim(fgets(STDIN));
+
+		return ($default !== NULL AND empty($value))
+			? $default
+			: $value;
 	}
 }
