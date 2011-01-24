@@ -23,9 +23,9 @@ class Minion_Task_App_Install extends Minion_Task {
 		// Generate kohana/application/bootstrap.php
 		fwrite(STDOUT, "Bootstrap Configuration\n");
 
-		$data = $this->get_bootstrap_values();
+		$bootstrap_values = $this->get_bootstrap_values();
 		$view = Kostache::factory('minion/bootstrap')
-			->set($data);
+			->set($bootstrap_values);
 
 		$filepath = APPPATH.'bootstrap.php';
 		file_put_contents($filepath, $view->render());
@@ -34,11 +34,19 @@ class Minion_Task_App_Install extends Minion_Task {
 		// Generate kohana/application/config/database.php
 		fwrite(STDOUT, "Database Configuration\n");
 
-		$data = $this->get_database_values();
+		$database_values = $this->get_database_values();
 		$view = Kostache::factory('minion/config/database')
-			set($data);
+			->set($database_values);
 
 		$filepath = APPPATH.'config/database.php';
+		file_put_contents($filepath, $view->render());
+		fwrite(STDOUT, "File written to ".$filepath."\n");
+
+		// Generate the .htaccess file
+		$view = Kostache::factory('minion/htaccess')
+			->set('base_url', Arr::get($bootstrap_values, 'base_url'));
+
+		$filepath = DOCROOT.'../.htaccess';
 		file_put_contents($filepath, $view->render());
 		fwrite(STDOUT, "File written to ".$filepath."\n");
 
