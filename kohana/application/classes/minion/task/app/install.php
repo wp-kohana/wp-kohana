@@ -20,10 +20,31 @@ class Minion_Task_App_Install extends Minion_Task {
 	 */
 	public function execute(array $config)
 	{
+		fwrite(STDOUT, "Bootstrap Configuration\n");
+		$this->setup_bootstrap();
+
 		fwrite(STDOUT, "Database Configuration\n");
 		$this->setup_db_config();
 
 		return;
+	}
+
+	protected function setup_bootstrap()
+	{
+		$view = Kostache::factory('minion/bootstrap')
+			->bind('timezone', $timezone)
+			->bind('locale', $locale)
+			->bind('language', $language)
+			->bind('base_url', $base_url);
+
+		$timezone = $this->ask('Timezone', 'America/Chicago');
+		$locale = $this->ask('Locale', 'en_US.utf-8');
+		$language = $this->ask('Language', 'en-us');
+		$base_url = $this->ask('Base URL', 'http://dev.vm/wp-kohana/');
+
+		$filepath = APPPATH.'bootstrap.php';
+		file_put_contents($filepath, $view->render());
+		fwrite(STDOUT, "File written to ".$filepath."\n");
 	}
 
 	protected function setup_db_config()
